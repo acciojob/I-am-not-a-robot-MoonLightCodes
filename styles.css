@@ -1,48 +1,90 @@
+/* General Body Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
   margin: 0;
   padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Container Styling */
 .container {
-  margin: 50px auto;
-  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
 }
 
+/* Heading Styling */
 h3 {
-  color: #333;
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
+/* Image Container Styling */
 .image-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  margin-bottom: 25px;
 }
 
 img {
   width: 100px;
   height: 100px;
-  border: 2px solid #ccc;
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 img.selected {
   border-color: #007bff;
+  transform: scale(1.1);
 }
 
+/* Button Styling */
 button {
-  margin: 10px;
-  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
   font-size: 1em;
+  padding: 12px 20px;
   cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #003f88;
+}
+
+/* Message Styling */
 #para {
   margin-top: 20px;
   font-size: 1.2em;
-  color: #555;
+  color: #4f4f4f;
+}
+
+#para.success {
+  color: #28a745; /* Green for success */
+}
+
+#para.error {
+  color: #dc3545; /* Red for error */
 }
