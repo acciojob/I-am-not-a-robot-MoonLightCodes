@@ -1,90 +1,64 @@
-/* General Body Styling */
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
 }
+body{
+	text-align:center;
+	display:flex;
+	height:100vh;
+	align-items:center;
+	justify-content:center;
+}
+#img-cont{
+	margin:20px;
+	display:flex;
+	flex-wrap:wrap;
+	gap:10px;
+	transform: translate(20px, 0px);
+}
+#img-cont img {
+  flex: 0 1 calc(33.33% - 20px); 
+  max-width: calc(33.33% - 20px);
+	box-sizing:border-box;
+}
+#cont{
+	height:95%;
+	box-shadow:4px 4px 100px black;
+	padding:20px;
+	background-color:#e5e5e5;
+	border-radius:10px;
+}
+#msg{
+	font-size:1.2em;
+}
+.img-c{
+	width:100px;
+	heigth:100px;
+	border:2px solid white;
+	border-radius:10px;
+}
+.selected{
+	transform:scale(1.05);
+	outline:3px solid #00bff7;
+}
+#reset,#verify{
+	margin:30px;
+	border:none;
+	cursor:pointer;
+	padding:10px;
+	color:white;
+	background-color:#00bff7;
+	font-size:1em;
+	border-radius:5px;
+}
+#reset:hover,#verify:hover{
+	transform:scale(1.1);
+}
+ 
 
-/* Container Styling */
-.container {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 30px;
-  width: 80%;
-  max-width: 500px;
-}
 
-/* Heading Styling */
-h3 {
-  font-size: 1.5rem;
-  color: #333333;
-  margin-bottom: 20px;
-}
 
-/* Image Container Styling */
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 25px;
-}
 
-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 3px solid #e0e0e0;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
 
-img.selected {
-  border-color: #007bff;
-  transform: scale(1.1);
-}
 
-/* Button Styling */
-button {
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 20px;
-  font-size: 1em;
-  padding: 12px 20px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-  background-color: #003f88;
-}
-
-/* Message Styling */
-#para {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #4f4f4f;
-}
-
-#para.success {
-  color: #28a745; /* Green for success */
-}
-
-#para.error {
-  color: #dc3545; /* Red for error */
-}
